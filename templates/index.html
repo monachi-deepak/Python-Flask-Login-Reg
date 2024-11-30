@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Landing Page</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://w0.peakpx.com/wallpaper/1/745/HD-wallpaper-plexus-connections-dots-lines-abstract.jpg') no-repeat center center/cover;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7); /* Black overlay for text readability */
+            padding: 2rem;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .heading {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0 0 1rem;
+            color: #ff3333;
+        }
+
+        .sub-heading {
+            font-size: 1.5rem;
+            margin: 0 0 2rem;
+            color: #fff;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #000;
+            transition: all 0.3s ease-in-out;
+            width: 150px;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .register {
+            background-color: #ff3333;
+        }
+
+        .register:hover {
+            transform: scale(1.1);
+            background-color: #ff0000;
+            box-shadow: 0 6px 20px rgba(255, 51, 51, 0.5);
+        }
+
+        .login {
+            background-color: #3333ff;
+        }
+
+        .login:hover {
+            transform: scale(1.1);
+            background-color: #0000ff;
+            box-shadow: 0 6px 20px rgba(51, 51, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Cybersecurity Hub</h1>
+        <p class="sub-heading">Secure your future, one step at a time.</p>
+        <div class="button-container">
+            <a href="/register" class="button register">Register</a>
+            <a href="/login" class="button login">Log In</a>
+        </div>
+    </div>
+</body>
+</html>

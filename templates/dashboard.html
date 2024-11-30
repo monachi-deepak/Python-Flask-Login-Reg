@@ -1,0 +1,62 @@
+{% extends 'app.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2 class="display-4 text-primary">Welcome to Your Dashboard</h2>
+        <p class="lead text-muted">Your personal space to manage your information.</p>
+    </div>
+
+    {% if user %}
+    <div class="card shadow-lg border-light rounded">
+        <div class="card-body">
+            <h5 class="card-title text-success">User Information</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Name:</strong>
+                    <span>{{ user[1] }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Email:</strong>
+                    <span>{{ user[2] }}</span>
+                </li>
+            </ul>
+            <div class="text-center mt-3">
+                <a href="/logout" class="btn btn-danger btn-lg">Logout</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p class="text-center text-danger">No user information available. Please log in.</p>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .card {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+        font-size: 1.5rem;
+    }
+    .btn-danger {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        background-color: #dc3545;
+        border: none;
+        text-transform: uppercase;
+    }
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+    .list-group-item {
+        font-size: 1.1rem;
+    }
+</style>
+{% endblock %}
